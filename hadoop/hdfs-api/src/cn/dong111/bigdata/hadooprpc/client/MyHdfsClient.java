@@ -1,0 +1,22 @@
+package cn.dong111.bigdata.hadooprpc.client;
+
+import cn.dong111.bigdata.hadooprpc.protocol.ClientNamenodeProtocol;
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.ipc.RPC;
+
+import java.io.IOException;
+import java.net.InetSocketAddress;
+
+/**
+ * Created by chendong on 2016/12/11.
+ */
+public class MyHdfsClient {
+
+    public static void main(String[] args) throws IOException {
+        ClientNamenodeProtocol namenode = RPC.getProxy(ClientNamenodeProtocol.class, 1L
+                , new InetSocketAddress("localhost", 8181), new Configuration());
+        String metaData= namenode.getMetaData("/params1");
+        System.out.println(metaData);
+    }
+
+}
