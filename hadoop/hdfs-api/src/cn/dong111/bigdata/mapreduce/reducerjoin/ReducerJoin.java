@@ -27,9 +27,9 @@ import java.util.ArrayList;
  1002,20150710,P0002,3
  1003,20150710,P0003,3
  product.txt(商品编号, 商品名字, 价格, 数量)
- P0001	小米5	1001	2
- P0002	锤子T1	1000	3
- P0003	锤子	1002	4
+ P0001,小米5,1001,2
+ P0002,锤子T1,1000,3
+ P0003,锤子,1002,4
  * Created by chendong on 2016/12/25.
  */
 public class ReducerJoin {
